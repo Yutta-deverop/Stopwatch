@@ -1,0 +1,174 @@
+:root {
+  --primary-color: #ffffff;
+  --secondary-color: #f0f0f0;
+  --accent-color: #333333;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  width: 300px;
+}
+
+.stopwatch {
+  margin: 20px 0;
+}
+
+.time-display {
+  font-size: 2rem;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.buttons button {
+  margin: 5px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttons button:hover {
+  opacity: 0.8;
+}
+
+/* ドロップダウンメニュー */
+.theme-selector {
+  margin-top: 20px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.theme-selector label {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#themeSelect {
+  padding: 10px 15px;
+  font-size: 1rem;
+  background-color: var(--secondary-color);
+  border: 2px solid #9c9c9c;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #000000;
+  outline: none;
+}
+
+#themeSelect:hover {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  box-shadow: 0 4px 8px rgb(217 207 207 / 20%);
+}
+
+#themeSelect:focus {
+  border-color: #9c9c9c;
+  box-shadow: 0 0 5px rgb(0 0 0 / 30%);
+}
+
+#themeSelect option {
+  padding: 10px;
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+}
+
+#themeSelect option:hover {
+  background-color: var(--secondary-color);
+}
+
+.lap-container {
+  height: 200px; /* 高さを固定 */
+  overflow-y: auto; /* スクロールを有効化 */
+  margin-top: 20px;
+  padding: 10px;
+  background-color: var(--secondary-color);
+  border-radius: 10px;
+  border: 1px solid var(--accent-color);
+}
+
+.lap-container h2 {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+}
+
+.lap-times {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.lap-times li {
+  background-color: var(--primary-color);
+  padding: 5px 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#themeSelect {
+  padding: 5px;
+}
+
+.white {
+  --primary-color: #ffffff;
+  --secondary-color: #f0f0f0;
+  --accent-color: #333333;
+}
+
+.gray {
+  --primary-color: #dcdcdc;
+  --secondary-color: #d0d0d0;
+  --accent-color: #444444;
+}
+
+.blue {
+  --primary-color: #e0f7fa;
+  --secondary-color: #b2ebf2;
+  --accent-color: #00796b;
+}
+
+.green {
+  --primary-color: #e8f5e9;
+  --secondary-color: #c8e6c9;
+  --accent-color: #388e3c;
+}
+
+.pink {
+  --primary-color: #fce4ec;
+  --secondary-color: #f8bbd0;
+  --accent-color: #c2185b;
+}
+
+.delete-lap {
+  background: none;
+  border: none;
+  font-size: 0.8rem;  /* ボタンのサイズを小さく */
+  color: #d32f2f;  /* 赤色 */
+  cursor: pointer;
+  margin-left: 10px;
+  transition: transform 0.2s, box-shadow 0.2s;  /* アニメーション */
+}
+
+.delete-lap:hover {
+  color: #c2185b;  /* ホバー時の色 */
+  transform: scale(1.2);  /* ホバー時に少し大きく */
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);  /* 少し影を付ける */
+}
